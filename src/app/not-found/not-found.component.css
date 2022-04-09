@@ -1,0 +1,10 @@
+div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color:  #4e95c3;
+}
+
+h1 {
+color: #9bbec7;
+}

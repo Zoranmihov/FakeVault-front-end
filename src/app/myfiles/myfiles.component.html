@@ -1,0 +1,57 @@
+<div class="files" style="overflow-x: auto" *ngIf="loaded">
+  <table *ngIf="this.data">
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>File type</th>
+      <th>Actions</th>
+    </tr>
+    <tr *ngFor="let file of this.data">
+      <td>{{ file.name.slice(11) }}</td>
+      <td>{{ file.description }}</td>
+      <td>{{ file.type }}</td>
+      <td>
+        <span
+          class="actions"
+          (click)="fileAction(file.name, file.description, 'download')"
+          >Download</span
+        >
+        <span
+          class="actions"
+          (click)="fileAction(file.name, file.description, 'delete')"
+          >Delete</span
+        >
+        <span
+          class="actions"
+          (click)="fileAction(file.name, file.description, 'share')"
+          >Share</span
+        >
+      </td>
+    </tr>
+  </table>
+  <p class="noFiles" *ngIf="!this.data">No files were found.</p>
+</div>
+
+<div #modal class="modal">
+  <div class="modal-content">
+    <span (click)="closeModel()" class="close">&times;</span>
+    <h1 #title>Share this file with:</h1>
+    <input
+      #email
+      (change)="getEmail($event)"
+      type="text"
+      placeholder="Enter user's email"
+    />
+    <button (click)="wait()">Share file</button>
+  </div>
+</div>
+
+<div #downloadModal class="modal">
+  <div class="modal-content">
+    <mat-progress-bar
+      class="progress"
+      mode="determinate"
+      value="{{ progress }}"
+    ></mat-progress-bar>
+  </div>
+</div>

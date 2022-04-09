@@ -1,0 +1,24 @@
+<div class="files" style="overflow-x: auto" *ngIf="loaded">
+  <table *ngIf="this.data">
+    <tr>
+      <th>Name</th>
+      <th>File type</th>
+      <th>Shared with</th>
+    </tr>
+    <tr *ngFor="let file of this.data">
+      <td>{{ file.name.slice(11) }}</td>
+      <td>{{ file.type }}</td>
+      <td>
+        <div class="actionsContainer">
+          <div class="userActions" *ngFor="let user of file.shared_with">
+            <p>{{ user }}</p>
+            <p class="actionsText">Unshare</p>
+          </div>
+        </div>
+      </td>
+    </tr>
+  </table>
+  <p class="noFiles" *ngIf="!this.data">No files were found.</p>
+</div>
+
+<!--   (click)="unShareFile(file.name, file.type, user)"      -->

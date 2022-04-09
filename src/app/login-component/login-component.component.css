@@ -1,0 +1,66 @@
+.container {
+  background-color: #4e95c3;
+  height: 92vh;
+}
+form {
+  text-align: center;
+  width: 98%;
+  padding: 10px;
+  background-color: inherit;
+  margin: auto;
+}
+
+span {
+  font-size: 1.6rem;
+  font-weight: 700;
+  text-align: center;
+  display: block;
+}
+
+label {
+  font-size: 1.3rem;
+  margin: 8px 0;
+  float: left;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  font-size: 1.1rem;
+  padding: 8px;
+  margin: 4px 0;
+  display: block;
+  border: none;
+  background: #9bbec7;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+.registerbtn {
+  background-color: #9bbec7;
+  color: black;
+  font-size: 1.1rem;
+  padding: 8px;
+  margin: 10px 0;
+  border: none;
+  cursor: pointer;
+  opacity: 0.9;
+  width: 35%;
+}
+
+.registerbtn:hover {
+  opacity: 1;
+}
+
+.signInText {
+  margin: 6px 0;
+  font-size: 1.2rem;
+}
+
+a:hover {
+  text-decoration: underline;
+}

@@ -1,0 +1,19 @@
+.actionsContainer {
+  max-height: 75px;
+  overflow-y: auto;
+}
+
+.userActions {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 3px;
+}
+
+.actionsText {
+  margin-left: 12px;
+}
+
+.actionsText:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}

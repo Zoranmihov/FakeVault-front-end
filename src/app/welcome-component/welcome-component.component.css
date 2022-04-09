@@ -1,0 +1,81 @@
+.container {
+  background-color: #4e95c3;
+  height: 92vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 95%;
+}
+
+.not-logged {
+  flex-direction: column;
+}
+
+form {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  background-color: #9bbec7;
+  width: 90%;
+  height: min-content;
+}
+
+h1 {
+  align-self: center;
+}
+
+label {
+  font-size: 1.3rem;
+  margin: 14px 0;
+  float: left !important;
+}
+
+input[type="text"] {
+  width: 100%;
+  font-size: 1.1rem;
+  padding: 5px;
+  margin: 6px 0;
+  display: block;
+  border: none;
+}
+
+#file {
+  display: none;
+}
+
+button {
+  color: black;
+  font-size: 1.1rem;
+  padding: 5px;
+  margin: 10px auto;
+  cursor: pointer;
+  width: 40%;
+}
+
+.progressContainer {
+  display: none;
+}
+
+.progress {
+  padding: 15px;
+  width: 100%;
+}
+
+img {
+  width: 250px;
+  height: 200px;
+  object-fit: scale-down;
+}
+
+p {
+  padding: 7px;
+  text-align: justify;
+  font-size: 18px;
+}

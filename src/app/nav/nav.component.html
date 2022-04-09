@@ -1,0 +1,21 @@
+<nav *ngIf="loaded">
+  <div>
+    <span id="logo">FakeVault</span>
+    <a routerLink="/">Home</a>
+  </div>
+  <div *ngIf="isAuth" class="container2">
+    <div class="dropdown">
+      <a class="dropbtn"> Files </a>
+      <div class="dropdown-content">
+        <a routerLink="/myfiles" class="links">My files</a>
+        <a routerLink="/mysharedfiles" class="links">My shared files</a>
+        <a routerLink="/filessharedwith" class="links">Files shared with me</a>
+      </div>
+    </div>
+    <span (click)="logout()" id="logout">Logout</span>
+  </div>
+  <div *ngIf="!isAuth">
+    <a routerLink="/login">Login</a>
+    <a routerLink="/register">Register</a>
+  </div>
+</nav>

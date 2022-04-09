@@ -1,0 +1,40 @@
+<div class="files" style="overflow-x: auto" *ngIf="loaded">
+  <table *ngIf="this.data">
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>File type</th>
+      <th>Uploaded by</th>
+      <th>Actions</th>
+    </tr>
+    <tr *ngFor="let file of this.data">
+      <td>{{ file.name.slice(11) }}</td>
+      <td>{{ file.description }}</td>
+      <td>{{ file.type }}</td>
+      <td>{{ file.by_user }}</td>
+      <td>
+        <span
+          class="actions"
+          (click)="downloadFile(file.name, file.description)"
+          >Download</span
+        >
+        <span
+          class="actions"
+          (click)="unfollow(file.name, file.description, file.by_user)"
+          >Unfollow</span
+        >
+      </td>
+    </tr>
+  </table>
+  <p class="noFiles" *ngIf="!this.data">No files were found.</p>
+</div>
+
+<div #downloadModal class="modal">
+  <div class="modal-content">
+    <mat-progress-bar
+      class="progress"
+      mode="determinate"
+      value="{{ progress }}"
+    ></mat-progress-bar>
+  </div>
+</div>

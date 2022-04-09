@@ -1,0 +1,59 @@
+<div *ngIf="loaded; else floading">
+  <div *ngIf="isAuth && loaded; else notAuth" class="container">
+    <div class="content">
+      <form enctype="multipart/form-data" (ngSubmit)="uploadFile()">
+        <h1 #title>Upload your file:</h1>
+        <label for="description">Description:</label>
+        <input
+          (change)="getDescription($event)"
+          type="text"
+          placeholder="Enter a description"
+        />
+        <input
+          type="text"
+          *ngIf="documentName"
+          value="{{ documentName }}"
+          readonly
+        />
+        <input
+          id="file"
+          #fileinput
+          (change)="getInput($event)"
+          required
+          type="file"
+        />
+        <button type="button" (click)="choseFile()">Choose a file:</button>
+        <button type="submit">Submit</button>
+        <div class="progressContainer" #progressBar>
+          <mat-progress-bar
+            class="progress"
+            mode="determinate"
+            value="{{ progress }}"
+          ></mat-progress-bar>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <ng-template #notAuth>
+    <div class="container">
+      <div class="content not-logged">
+        <img
+          src="https://media.istockphoto.com/vectors/open-vault-vector-id1049662238?k=20&m=1049662238&s=612x612&w=0&h=4VU9Z4_B2SmxPLOpKwY33VA8dRtDg4Bj-EbpiXyqeXU="
+          alt="An image of a vault goes here"
+        />
+        <br />
+        <p>
+          Welcome to your own personal vault. A free online storage space for
+          your files.
+        </p>
+      </div>
+    </div>
+  </ng-template>
+</div>
+
+<ng-template #floading>
+<div class="container">
+  <h1>Loading...</h1>
+</div>
+</ng-template>

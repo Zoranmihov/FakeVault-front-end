@@ -1,0 +1,43 @@
+<div class="container">
+  <form [formGroup]="registerForm" (ngSubmit)="register()">
+    <h1 #title>Register</h1>
+    <p class="signInText">Please fill in this form to create an account.</p>
+    <label for="Name">Name</label>
+    <input
+      formControlName="name"
+      type="text"
+      placeholder="Name"
+      id="name"
+      required
+    />
+
+    <label for="email">Email</label>
+    <input
+      formControlName="email"
+      type="text"
+      placeholder="Enter Email"
+      id="email"
+      required
+    />
+    <span *ngIf="email && email.invalid && email.dirty">Invalid email</span>
+    <label for="psw">Password</label>
+    <input
+      formControlName="password"
+      type="password"
+      placeholder="Enter Password"
+      id="psw"
+      required
+    />
+    <span *ngIf="password && password.invalid && password.dirty"
+      >Passwords must have at least 8 characters and contain the following:
+      uppercase letters, lowercase letters, numbers, and symbols</span
+    >
+    <button [disabled]="registerForm.invalid" type="submit" class="registerbtn">
+      Register
+    </button>
+    <p class="signInText">
+      Already have an account?
+      <a routerLink="/login" class="signInText">Click here to sign in</a>
+    </p>
+  </form>
+</div>

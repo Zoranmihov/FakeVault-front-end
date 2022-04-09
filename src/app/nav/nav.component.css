@@ -1,0 +1,103 @@
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #9bbec7;
+  height: 8vh;
+}
+
+#logo {
+  font-family: "Pacifico", cursive, sans-serif;
+}
+
+div {
+  margin: 8px;
+}
+
+a,
+span {
+  font-size: 1.3rem;
+  color: black;
+  padding: 15px;
+}
+
+a:hover,
+#logout:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.links {
+  text-align: center;
+  font-size: 1.1rem;
+  color: black;
+  display: block;
+}
+
+.links:hover {
+  text-decoration: none;
+}
+
+.links:hover {
+  background-color: #4e95c3;
+}
+
+.dropbtn {
+  background-color: inherit;
+  color: black;
+  padding: 5px 8px;
+  font-size: 1.3rem;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  margin-right: 1px;
+  margin: 0px;
+  overflow: auto;
+  position: absolute;
+  left: -22px;
+  background-color: #9bbec7;
+  border: 1px solid black;
+  min-width: 100px;
+  z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropbtn:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 400px) {
+  .container2 {
+    display: flex;
+  }
+
+  a,
+  span {
+    font-size: 18px;
+    color: black;
+    padding: 4px;
+    margin: 0;
+  }
+
+  #logout {
+    margin-top: 4px;
+    cursor: pointer !important;
+  }
+  .dropbtn {
+    font-size: 18px;
+    padding: 4px;
+  }
+}
