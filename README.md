@@ -1,6 +1,6 @@
 ## About:
 
-The idea behind FakeVault is a file storage/sharing platform inspired by google drive with the option of alloriwng other users to download said files.\
+The idea behind FakeVault is a file storage/sharing platform inspired by google drive with the option of alloriwng other users to download said files. Accompanied by an android app made with React Native. https://apkpure.com/p/FakeVault.app
 
 ## How to use:
 
